@@ -1,5 +1,5 @@
 #include "monster.h"
-#include "..\core\core.h"
+#include "core.h"
 
 const monsterAttributesManager_t::monsterAttributes_t& monsterAttributesManager_t::operator[](int monsterId) {
 	if(m_attributesList.find(monsterId) != m_attributesList.end()) {

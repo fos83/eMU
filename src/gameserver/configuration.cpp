@@ -1,6 +1,6 @@
 #include <boost\algorithm\string.hpp>
 #include "configuration.h"
-#include "..\core\core.h"
+#include "core.h"
 
 void serverConfiguration_t::read(const std::string &configFileName) {
 	eMUCore::xmlConfig_t configFile;

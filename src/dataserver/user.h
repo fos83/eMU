@@ -2,7 +2,7 @@
 #define eMU_DATASERVER_USER_H
 
 #include <vector>
-#include "..\core\core.h"
+#include "core.h"
 
 class dataServerUser_t: public eMUCore::socketContext_t {
 public:

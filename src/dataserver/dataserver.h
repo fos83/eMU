@@ -1,11 +1,11 @@
 #ifndef eMU_DATASERVER_DATASERVER_H
 #define eMU_DATASERVER_DATASERVER_H
 
-#include "..\core\core.h"
+#include "core.h"
 #include "user.h"
 #include "game.h"
 #include "configuration.h"
-#include <boost/bind.hpp>
+#include <boost\bind.hpp>
 
 #pragma warning(disable: 4355)
 

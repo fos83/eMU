@@ -1,8 +1,8 @@
 #ifndef eMU_DATASERVER_PROTOCOL_H
 #define eMU_DATASERVER_PROTOCOL_H
 
-#include "..\core\core.h"
-#include "..\shared\shared.h"
+#include "core.h"
+#include "shared.h"
 #include "user.h"
 
 class protocolExecutorInterface_t {

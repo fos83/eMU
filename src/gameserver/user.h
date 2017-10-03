@@ -2,8 +2,8 @@
 #define eMU_GAMESERVER_USER_H
 
 #include <vector>
-#include "..\core\core.h"
-#include "..\shared\shared.h"
+#include "core.h"
+#include "shared.h"
 #include "character.h"
 
 class gameServerUser_t: public eMUCore::socketContext_t {

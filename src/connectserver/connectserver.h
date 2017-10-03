@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <boost\bind.hpp>
-#include "..\core\core.h"
+#include "core.h"
 #include "user.h"
 #include "game.h"
 

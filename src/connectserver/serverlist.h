@@ -1,9 +1,9 @@
 #ifndef eMU_CONNECTSERVER_SERVERLIST_H
 #define eMU_CONNECTSERVER_SERVERLIST_H
 
-#include <map>
-#include <string>
-#include "..\core\core.h"
+//#include <map>
+//#include <string>
+#include "core.h"
 
 class serverList_t {
 public:

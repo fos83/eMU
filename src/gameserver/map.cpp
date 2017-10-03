@@ -1,5 +1,5 @@
 #include "map.h"
-#include "..\core\core.h"
+#include "core.h"
 #include <fstream>
 
 void map_t::startup(const std::string &filename, int mapId) {

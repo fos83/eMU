@@ -1,5 +1,5 @@
 #include "gate.h"
-#include "..\core\core.h"
+#include "core.h"
 
 bool gate_t::isInGate(unsigned char x, unsigned char y) const {
 	if(x >= m_x1 && x <= m_x2

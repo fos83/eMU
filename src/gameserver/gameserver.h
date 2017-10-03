@@ -1,12 +1,12 @@
 #ifndef eMU_GAMESERVER_GAMESERVER_H
 #define eMU_GAMESERVER_GAMESERVER_H
 
-#include "..\core\core.h"
+#include "core.h"
 #include "user.h"
 #include "game.h"
 #include "configuration.h"
 #include "crypt.h"
-#include <boost/bind.hpp>
+#include <boost\bind.hpp>
 
 #pragma warning(disable: 4355)
 

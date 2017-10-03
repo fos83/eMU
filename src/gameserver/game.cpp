@@ -1,5 +1,5 @@
 #include "game.h"
-#include <boost/bind.hpp>
+#include <boost\bind.hpp>
 #include <iostream>
 
 void game_t::startup() {

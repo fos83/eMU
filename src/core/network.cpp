@@ -13,6 +13,7 @@ eMUCORE_DECLSPEC bool eMUCore::isIpAddress(std::string hostname) {
 eMUCORE_DECLSPEC std::string eMUCore::convertToIpAddress(std::string hostname) {
 	hostent *remote = gethostbyname(hostname.c_str());
 
+
 	if(remote != NULL) {
 		return inet_ntoa(*reinterpret_cast<in_addr*>(remote->h_addr_list[0]));
 	} else {

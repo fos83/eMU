@@ -1,8 +1,8 @@
 #ifndef eMU_GAMESERVER_PROTOCOL_H
 #define eMU_GAMESERVER_PROTOCOL_H
 
-#include "..\core\core.h"
-#include "..\shared\shared.h"
+#include "core.h"
+#include "shared.h"
 #include "user.h"
 #include "character.h"
 #include "map.h"

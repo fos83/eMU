@@ -1,11 +1,12 @@
 #ifndef eMU_DATASERVER_DATABASE_H
 #define eMU_DATASERVER_DATABASE_H
 
-#include <string>
-#include <sstream>
-#include <winsock2.h> // What the fuck?????????????????
+// #include <string>
+// #include <sstream>
+#include "core.h"
+// #include <winsock2.h> // What the fuck?????????????????
 #include <mysql\mysql.h>
-#include "..\core\core.h"
+
 
 class database_t {
 public:

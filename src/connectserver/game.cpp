@@ -1,5 +1,5 @@
 #include "game.h"
-#include <boost/bind.hpp>
+#include <boost\bind.hpp>
 
 void game_t::startup() {
 	m_serverList.startup("serverList.xml");

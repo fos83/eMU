@@ -5,7 +5,7 @@
 #include <vector>
 #include <map>
 #include <string>
-#include <boost/function.hpp>
+#include <boost\function.hpp>
 
 class monsterAttributesManager_t {
 public:

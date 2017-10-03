@@ -1,8 +1,8 @@
 #ifndef eMU_GAMESERVER_DSPROTOCOL_H
 #define eMU_GAMESERVER_DSPROTOCOL_H
 
-#include "..\core\core.h"
-#include "..\shared\shared.h"
+#include "core.h"
+#include "shared.h"
 
 // what a big name xD.
 class dataServerProtocolExecutorInterface_t {

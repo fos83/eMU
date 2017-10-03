@@ -1,6 +1,6 @@
 #include "viewport.h"
 #include "gameobject.h"
-#include "..\core\core.h"
+#include "core.h"
 
 bool viewport_t::viewedObject_t::operator ==(const viewport_t::viewedObject_t &vo) const {
 	return (m_object->getIndex() == vo.m_object->getIndex());

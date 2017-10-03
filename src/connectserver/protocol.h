@@ -1,7 +1,7 @@
 #ifndef eMU_CONNECTSERVER_PROTOCOL_H
 #define eMU_CONNECTSERVER_PROTOCOL_H
 
-#include "..\core\core.h"
+#include "core.h"
 #include "user.h"
 #include "serverlist.h"
 

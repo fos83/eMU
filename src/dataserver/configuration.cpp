@@ -1,6 +1,6 @@
 #include <algorithm>
 #include "configuration.h"
-#include "..\core\core.h"
+#include "core.h"
 
 void configuration_t::read(const std::string &configFileName) {
 	eMUCore::xmlConfig_t configFile;

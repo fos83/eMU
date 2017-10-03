@@ -1,7 +1,7 @@
 #include <fstream>
 #include <sstream>
 #include "crypt.h"
-#include "..\core\core.h"
+#include "core.h"
 
 void crypt_t::startup(const std::string &encFileName, const std::string &decFileName) {
 	this->loadKeys(encFileName, _ENCRYPTION_KEYS);

@@ -1,7 +1,7 @@
 #ifndef eMU_GAMESERVER_CHARACTER_H
 #define eMU_GAMESERVER_CHARACTER_H
 
-#include "..\shared\shared.h"
+#include "shared.h"
 #include "gameobject.h"
 
 class character_t: public gameObject_t {

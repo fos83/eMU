@@ -12,9 +12,9 @@
 
 #include <winsock2.h>
 #include <windows.h>
-#include <libxml/parser.h>
-#include <boost/lexical_cast.hpp>
-#include <boost/function.hpp>
+#include <libxml\parser.h>
+#include <boost\lexical_cast.hpp>
+#include <boost\function.hpp>
 #include <string>
 #include <sstream>
 #include <vector>

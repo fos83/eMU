@@ -2,7 +2,7 @@
 #define eMU_CONNECTSERVER_USER_H
 
 #include <vector>
-#include "..\core\core.h"
+#include "core.h"
 
 class connectServerUser_t: public eMUCore::socketContext_t {
 public:
