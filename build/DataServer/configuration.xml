@@ -1,0 +1,7 @@
+<configuration>
+	<dbHostname>localhost</dbHostname>
+	<dbPort>3306</dbPort>
+	<dbName>emu</dbName>
+	<dbUserName>root</dbUserName>
+	<dbPassword>asd123</dbPassword>
+</configuration>
