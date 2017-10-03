@@ -1,0 +1,7 @@
+<configuration>
+	<dbHostname>localhost</dbHostname>
+	<dbPort>3306</dbPort>
+	<dbName>muonline</dbName>
+	<dbUserName>user</dbUserName>
+	<dbPassword>password</dbPassword>
+</configuration>

@@ -1,0 +1,12 @@
+<configuration>
+	<serverCode>0</serverCode>
+
+	<connectServerHost>localhost</connectServerHost>
+	<connectServerPort>44405</connectServerPort>
+
+	<masterDataServerHost>localhost</masterDataServerHost>
+	<masterDataServerPort>55960</masterDataServerPort>
+
+	<slaveDataServerHost>localhost</slaveDataServerHost>
+	<slaveDataServerPort>55962</slaveDataServerPort>
+</configuration>
