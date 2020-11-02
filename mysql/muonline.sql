@@ -1,28 +1,22 @@
-# SQL Manager 2010 Lite for MySQL 4.5.1.3
-# ---------------------------------------
-# Host     : localhost
-# Port     : 3306
-# Database : emu
+/*
+SQLyog Community v13.1.7 (64 bit)
+MySQL - 8.0.21 : Database - emu
+*********************************************************************
+*/
 
+/*!40101 SET NAMES utf8 */;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES latin1 */;
+/*!40101 SET SQL_MODE=''*/;
 
-SET FOREIGN_KEY_CHECKS=0;
-
-DROP DATABASE IF EXISTS `emu`;
-
-CREATE DATABASE `emu`
-    CHARACTER SET 'latin1'
-    COLLATE 'latin1_swedish_ci';
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`emu` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
 USE `emu`;
 
-#
-# Structure for the `accounts` table : 
-#
+/*Table structure for table `accounts` */
 
 DROP TABLE IF EXISTS `accounts`;
 
@@ -38,9 +32,9 @@ CREATE TABLE `accounts` (
   UNIQUE KEY `account_id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-#
-# Structure for the `characters` table : 
-#
+/*Data for the table `accounts` */
+
+/*Table structure for table `characters` */
 
 DROP TABLE IF EXISTS `characters`;
 
@@ -48,44 +42,40 @@ CREATE TABLE `characters` (
   `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `accountId` varchar(11) DEFAULT '',
   `name` varchar(11) NOT NULL DEFAULT '',
-  `race` tinyint(1) unsigned DEFAULT '0',
-  `level` smallint(2) unsigned NOT NULL DEFAULT '1',
-  `levelUpPoints` smallint(2) unsigned DEFAULT '0',
-  `experience` int(4) unsigned DEFAULT '0',
-  `strength` smallint(2) unsigned DEFAULT NULL,
-  `agility` smallint(2) unsigned DEFAULT NULL,
-  `vitality` smallint(2) unsigned DEFAULT NULL,
-  `energy` smallint(2) unsigned DEFAULT NULL,
-  `command` smallint(2) unsigned DEFAULT NULL,
-  `money` int(2) unsigned DEFAULT '0',
-  `health` int(4) DEFAULT NULL,
-  `maxHealth` int(4) DEFAULT NULL,
-  `mana` int(4) DEFAULT NULL,
-  `maxMana` int(4) DEFAULT NULL,
-  `mapId` tinyint(1) unsigned DEFAULT NULL,
-  `posX` tinyint(1) unsigned DEFAULT NULL,
-  `posY` tinyint(1) unsigned DEFAULT NULL,
+  `race` tinyint unsigned DEFAULT '0',
+  `level` smallint unsigned NOT NULL DEFAULT '1',
+  `levelUpPoints` smallint unsigned DEFAULT '0',
+  `experience` int unsigned DEFAULT '0',
+  `strength` smallint unsigned DEFAULT NULL,
+  `agility` smallint unsigned DEFAULT NULL,
+  `vitality` smallint unsigned DEFAULT NULL,
+  `energy` smallint unsigned DEFAULT NULL,
+  `command` smallint unsigned DEFAULT NULL,
+  `money` int unsigned DEFAULT '0',
+  `health` int DEFAULT NULL,
+  `maxHealth` int DEFAULT NULL,
+  `mana` int DEFAULT NULL,
+  `maxMana` int DEFAULT NULL,
+  `mapId` tinyint unsigned DEFAULT NULL,
+  `posX` tinyint unsigned DEFAULT NULL,
+  `posY` tinyint unsigned DEFAULT NULL,
   `direction` tinyint(1) DEFAULT NULL,
-  `controlCode` tinyint(1) unsigned DEFAULT '0',
+  `controlCode` tinyint unsigned DEFAULT '0',
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-#
-# Definition for the `eMU_AccountCheck` function : 
-#
+/*Data for the table `characters` */
 
-DROP FUNCTION IF EXISTS `eMU_AccountCheck`;
+/* Function  structure for function  `eMU_AccountCheck` */
 
-CREATE DEFINER = 'root'@'localhost' FUNCTION `eMU_AccountCheck`(
+/*!50003 DROP FUNCTION IF EXISTS `eMU_AccountCheck` */;
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` FUNCTION `eMU_AccountCheck`(
         _id VARCHAR(11),
         _password VARCHAR(11),
         _ipAddress VARCHAR(16)
-    )
-    RETURNS tinyint(4)
-    NOT DETERMINISTIC
-    CONTAINS SQL
-    SQL SECURITY DEFINER
-    COMMENT ''
+    ) RETURNS tinyint
 BEGIN
 	DECLARE `exists_` TINYINT;
     DECLARE `passwordCheck_` TINYINT;
@@ -160,24 +150,19 @@ BEGIN
     END IF;
 
   RETURN 2; -- not exists.
-END;
+END */$$
+DELIMITER ;
 
-#
-# Definition for the `eMU_AccountCreate` function : 
-#
+/* Function  structure for function  `eMU_AccountCreate` */
 
-DROP FUNCTION IF EXISTS `eMU_AccountCreate`;
+/*!50003 DROP FUNCTION IF EXISTS `eMU_AccountCreate` */;
+DELIMITER $$
 
-CREATE DEFINER = 'root'@'localhost' FUNCTION `eMU_AccountCreate`(
+/*!50003 CREATE DEFINER=`root`@`localhost` FUNCTION `eMU_AccountCreate`(
         _id VARCHAR(11),
         _password VARCHAR(11),
         _pin INTEGER(4)
-    )
-    RETURNS tinyint(1)
-    NOT DETERMINISTIC
-    CONTAINS SQL
-    SQL SECURITY DEFINER
-    COMMENT ''
+    ) RETURNS tinyint(1)
 BEGIN
 	DECLARE `exists_` TINYINT;
     
@@ -199,24 +184,19 @@ BEGIN
     END IF;
     
   RETURN 1;
-END;
+END */$$
+DELIMITER ;
 
-#
-# Definition for the `eMU_CharacterCreate` function : 
-#
+/* Function  structure for function  `eMU_CharacterCreate` */
 
-DROP FUNCTION IF EXISTS `eMU_CharacterCreate`;
+/*!50003 DROP FUNCTION IF EXISTS `eMU_CharacterCreate` */;
+DELIMITER $$
 
-CREATE DEFINER = 'root'@'localhost' FUNCTION `eMU_CharacterCreate`(
+/*!50003 CREATE DEFINER=`root`@`localhost` FUNCTION `eMU_CharacterCreate`(
         _accountId VARCHAR(11),
         _name VARCHAR(11),
         _race TINYINT
-    )
-    RETURNS tinyint(4)
-    NOT DETERMINISTIC
-    CONTAINS SQL
-    SQL SECURITY DEFINER
-    COMMENT ''
+    ) RETURNS tinyint
 BEGIN
     DECLARE count_ 		TINYINT;
 	DECLARE exists_ 	TINYINT;
@@ -321,24 +301,19 @@ BEGIN
     END IF;
         
     RETURN 0;
-END;
+END */$$
+DELIMITER ;
 
-#
-# Definition for the `eMU_CharacterDelete` function : 
-#
+/* Function  structure for function  `eMU_CharacterDelete` */
 
-DROP FUNCTION IF EXISTS `eMU_CharacterDelete`;
+/*!50003 DROP FUNCTION IF EXISTS `eMU_CharacterDelete` */;
+DELIMITER $$
 
-CREATE DEFINER = 'root'@'localhost' FUNCTION `eMU_CharacterDelete`(
+/*!50003 CREATE DEFINER=`root`@`localhost` FUNCTION `eMU_CharacterDelete`(
         _accountId VARCHAR(11),
         _name VARCHAR(11),
         _pin VARCHAR(8)
-    )
-    RETURNS tinyint(4)
-    NOT DETERMINISTIC
-    CONTAINS SQL
-    SQL SECURITY DEFINER
-    COMMENT ''
+    ) RETURNS tinyint
 BEGIN
 	DECLARE exists_ TINYINT;
 	DECLARE pinCheck_ TINYINT;
@@ -380,10 +355,10 @@ BEGIN
     END IF;
     
 	RETURN 0;
-END;
+END */$$
+DELIMITER ;
 
-
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

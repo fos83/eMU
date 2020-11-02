@@ -3,5 +3,5 @@
 	<dbPort>3306</dbPort>
 	<dbName>emu</dbName>
 	<dbUserName>root</dbUserName>
-	<dbPassword>asd123</dbPassword>
+	<dbPassword></dbPassword>
 </configuration>

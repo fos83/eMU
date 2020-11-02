@@ -14,18 +14,18 @@
     <ProjectGuid>{6B3EBF81-0DA5-46D7-BC40-410810A612B1}</ProjectGuid>
     <RootNamespace>connectserver</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -65,7 +65,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)src\core\;$(SolutionDir)src\shared\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalOptions>"$(SolutionDir)$(Configuration)\core\core.lib" ws2_32.lib libxml2.lib libmysql.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>"$(SolutionDir)$(Configuration)\core\core.lib" ws2_32.lib libxml2.lib libmariadb.lib %(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -88,7 +88,7 @@ xcopy /Y "$(OutDir)*.dll" "$(SolutionDir)build\$(ProjectName)"</Command>
       <AdditionalIncludeDirectories>$(SolutionDir)src\core\;$(SolutionDir)src\shared\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalOptions>"$(SolutionDir)$(Configuration)\core\core.lib" ws2_32.lib libxml2.lib libmysql.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>"$(SolutionDir)$(Configuration)\core\core.lib" ws2_32.lib libxml2.lib libmariadb.lib %(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
