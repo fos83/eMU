@@ -1,6 +1,7 @@
 #ifndef eMU_GAMESERVER_GATE_H
 #define eMU_GAMESERVER_GATE_H
 
+#include <iostream>
 #include <map>
 #include "map.h"
 

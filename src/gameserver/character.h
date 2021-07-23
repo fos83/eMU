@@ -1,6 +1,7 @@
 #ifndef eMU_GAMESERVER_CHARACTER_H
 #define eMU_GAMESERVER_CHARACTER_H
 
+#include <iostream>
 #include "shared.h"
 #include "gameobject.h"
 

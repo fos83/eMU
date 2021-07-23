@@ -65,7 +65,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)src\core\;$(SolutionDir)src\shared\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalOptions>"$(SolutionDir)$(Configuration)\core\core.lib" ws2_32.lib libxml2.lib libmysql.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>"$(SolutionDir)$(Configuration)\core\core.lib" ws2_32.lib libxml2.lib libmariadb.lib %(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <StackReserveSize>0</StackReserveSize>

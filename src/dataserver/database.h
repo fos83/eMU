@@ -1,10 +1,7 @@
 #ifndef eMU_DATASERVER_DATABASE_H
 #define eMU_DATASERVER_DATABASE_H
 
-// #include <string>
-// #include <sstream>
 #include "core.h"
-// #include <winsock2.h> // What the fuck?????????????????
 #include <mysql\mysql.h>
 
 
